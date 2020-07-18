@@ -2,12 +2,22 @@ package com.cricketfoursix.cricketdomain.common.game;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Competitor {
     private Long id;
     private String lineScoreRef;
     private String rosterRef;
+    private List<SquadPlayer> squad;
+
+    public List<SquadPlayer> getSquad() {
+        return squad;
+    }
+
+    public void setSquad(List<SquadPlayer> squad) {
+        this.squad = squad;
+    }
 
     private Map<Integer, InningsScoreCard> inningsScores = new HashMap<>();
 

@@ -4,6 +4,7 @@ public class GameClass {
     private Integer id;
     private String name;
     private String shortName;
+    private String type;
 
 
     public Integer getId() {
@@ -28,5 +29,14 @@ public class GameClass {
 
     public void setShortName(String shortName) {
         this.shortName = shortName;
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
