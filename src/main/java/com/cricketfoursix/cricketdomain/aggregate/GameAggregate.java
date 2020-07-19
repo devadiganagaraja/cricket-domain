@@ -13,9 +13,10 @@ public class GameAggregate {
 
     private String name;
 
-    private GameClass gameClass;
 
     private GameInfo gameInfo;
+
+
 
     public String getName() {
         return name;
@@ -27,7 +28,6 @@ public class GameAggregate {
 
     private Date lastUpdated;
 
-    private GameSummary gameSummary;
 
     private Competitor competitor1;
     private Competitor competitor2;
@@ -44,14 +44,6 @@ public class GameAggregate {
         this.id = id;
     }
 
-    public GameClass getGameClass() {
-        return gameClass;
-    }
-
-    public void setGameClass(GameClass gameClass) {
-        this.gameClass = gameClass;
-    }
-
     public GameInfo getGameInfo() {
         return gameInfo;
     }
@@ -60,9 +52,6 @@ public class GameAggregate {
         this.gameInfo = gameInfo;
     }
 
-    public GameSummary getGameSummary() {
-        return gameSummary;
-    }
 
     public LiveScoreCard getLiveScoreCard() {
         return liveScoreCard;
@@ -72,9 +61,6 @@ public class GameAggregate {
         this.liveScoreCard = liveScoreCard;
     }
 
-    public void setGameSummary(GameSummary gameSummary) {
-        this.gameSummary = gameSummary;
-    }
 
     public Date getLastUpdated() {
         return lastUpdated;
@@ -89,21 +75,7 @@ public class GameAggregate {
         return competitor1;
     }
 
-    @Override
-    public String toString() {
-        return "GameAggregate{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", gameClass=" + gameClass +
-                ", gameInfo=" + gameInfo +
-                ", lastUpdated=" + lastUpdated +
-                ", gameSummary=" + gameSummary +
-                ", competitor1=" + competitor1 +
-                ", competitor2=" + competitor2 +
-                ", liveScoreCard=" + liveScoreCard +
-                ", gameStatusApiRef='" + gameStatusApiRef + '\'' +
-                '}';
-    }
+
 
     public void setCompetitor1(Competitor competitor1) {
         this.competitor1 = competitor1;
@@ -123,6 +95,21 @@ public class GameAggregate {
 
     public void setGameStatusApiRef(String gameStatusApiRef) {
         this.gameStatusApiRef = gameStatusApiRef;
+    }
+
+
+    @Override
+    public String toString() {
+        return "GameAggregate{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", gameInfo=" + gameInfo +
+                ", lastUpdated=" + lastUpdated +
+                ", competitor1=" + competitor1 +
+                ", competitor2=" + competitor2 +
+                ", liveScoreCard=" + liveScoreCard +
+                ", gameStatusApiRef='" + gameStatusApiRef + '\'' +
+                '}';
     }
 
 }

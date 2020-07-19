@@ -7,18 +7,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Map;
 
-@Document(collection = "event_player_points")
-public class EventPlayerPointsAggregate {
+@Document(collection = "game_player_points")
+public class GamePlayerPointsAggregate {
     @Id
-    private String id;
+    private Long id;
 
     private Map<Long, PlayerPoints> playerPointsMap;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -28,13 +28,5 @@ public class EventPlayerPointsAggregate {
 
     public void setPlayerPointsMap(Map<Long, PlayerPoints> playerPointsMap) {
         this.playerPointsMap = playerPointsMap;
-    }
-
-    @Override
-    public String toString() {
-        return "EventPlayerPointsAggregate{" +
-                "id='" + id + '\'' +
-                ", playerPointsMap=" + playerPointsMap +
-                '}';
     }
 }

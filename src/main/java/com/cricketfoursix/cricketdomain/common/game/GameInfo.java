@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class GameInfo {
     private String name;
+    private long gameId;
     private long leagueId;
     private String leagueName;
     private int season;
@@ -11,6 +12,54 @@ public class GameInfo {
     private Date endDate;
     private GameStatus gameStatus;
     private String venue;
+    private long competitor1;
+
+    public long getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(long gameId) {
+        this.gameId = gameId;
+    }
+
+    public long getCompetitor1() {
+        return competitor1;
+    }
+
+    public void setCompetitor1(long competitor1) {
+        this.competitor1 = competitor1;
+    }
+
+    public long getCompetitor2() {
+        return competitor2;
+    }
+
+    public void setCompetitor2(long competitor2) {
+        this.competitor2 = competitor2;
+    }
+
+    public GameClass getGameClass() {
+        return gameClass;
+    }
+
+    public void setGameClass(GameClass gameClass) {
+        this.gameClass = gameClass;
+    }
+
+    public GameSummary getGameSummary() {
+        return gameSummary;
+    }
+
+    public void setGameSummary(GameSummary gameSummary) {
+        this.gameSummary = gameSummary;
+    }
+
+    private long competitor2;
+
+    private GameClass gameClass;
+
+    private GameSummary gameSummary;
+
 
     public String getToss() {
         return toss;

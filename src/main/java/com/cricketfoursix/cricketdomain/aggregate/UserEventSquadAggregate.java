@@ -10,7 +10,7 @@ import java.util.List;
 public class UserEventSquadAggregate {
     @Id
     private String userEventId;
-    private String eventId;
+    private Long gameId;
     private String userName;
     private List<UserSquadPlayer> userSquadPlayers;
 
@@ -18,13 +18,12 @@ public class UserEventSquadAggregate {
         return userEventId;
     }
 
-
-    public String getEventId() {
-        return eventId;
+    public Long getGameId() {
+        return gameId;
     }
 
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
+    public void setGameId(Long gameId) {
+        this.gameId = gameId;
     }
 
     public String getUserName() {

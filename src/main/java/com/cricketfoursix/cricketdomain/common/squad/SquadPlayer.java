@@ -8,6 +8,10 @@ public class SquadPlayer {
         return playerName;
     }
 
+    public SquadPlayer(String playerName) {
+        this.playerName = playerName;
+    }
+
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }

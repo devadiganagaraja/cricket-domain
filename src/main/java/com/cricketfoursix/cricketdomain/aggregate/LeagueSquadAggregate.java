@@ -4,7 +4,7 @@ import com.cricketfoursix.cricketdomain.common.squad.Squad;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Set;
+import java.util.HashMap;
 
 @Document(collection = "league_squad")
 public class LeagueSquadAggregate {
@@ -12,7 +12,7 @@ public class LeagueSquadAggregate {
     @Id
     private String id;
 
-    private Set<Squad> squads;
+    private HashMap<Long, Squad> squadMap = new HashMap<>();
 
     public String getId() {
         return id;
@@ -22,11 +22,11 @@ public class LeagueSquadAggregate {
         this.id = id;
     }
 
-    public Set<Squad> getSquads() {
-        return squads;
+    public HashMap<Long, Squad> getSquadMap() {
+        return squadMap;
     }
 
-    public void setSquads(Set<Squad> squads) {
-        this.squads = squads;
+    public void setSquadMap(HashMap<Long, Squad> squadMap) {
+        this.squadMap = squadMap;
     }
 }

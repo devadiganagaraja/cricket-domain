@@ -1,5 +1,6 @@
 package com.cricketfoursix.cricketdomain.aggregate;
 
+import com.cricketfoursix.cricketdomain.common.bbb.InningCommentarySummary;
 import com.cricketfoursix.cricketdomain.domain.bbb.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,7 +18,7 @@ public class BBBAggregate extends BaseAggregate {
     private BatsmanSummary otherBatsmanSummary;
     private BowlerSummary bowlerSummary;
     private OverSummary overSummary;
-    private InningSummary inningSummary;
+    private InningCommentarySummary inningCommentarySummary;
     private Dismissal dismissalSummary;
 
 
@@ -85,12 +86,12 @@ public class BBBAggregate extends BaseAggregate {
         this.overSummary = overSummary;
     }
 
-    public InningSummary getInningSummary() {
-        return inningSummary;
+    public InningCommentarySummary getInningCommentarySummary() {
+        return inningCommentarySummary;
     }
 
-    public void setInningSummary(InningSummary inningSummary) {
-        this.inningSummary = inningSummary;
+    public void setInningCommentarySummary(InningCommentarySummary inningCommentarySummary) {
+        this.inningCommentarySummary = inningCommentarySummary;
     }
 
     public Dismissal getDismissalSummary() {

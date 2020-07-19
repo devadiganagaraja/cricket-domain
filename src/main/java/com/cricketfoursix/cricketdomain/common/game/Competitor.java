@@ -1,6 +1,8 @@
 package com.cricketfoursix.cricketdomain.common.game;
 
 
+import com.cricketfoursix.cricketdomain.common.squad.SquadPlayer;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +11,7 @@ public class Competitor {
     private Long id;
     private String lineScoreRef;
     private String rosterRef;
+    private boolean winner;
     private List<SquadPlayer> squad;
 
     public List<SquadPlayer> getSquad() {
@@ -17,6 +20,14 @@ public class Competitor {
 
     public void setSquad(List<SquadPlayer> squad) {
         this.squad = squad;
+    }
+
+    public boolean isWinner() {
+        return winner;
+    }
+
+    public void setWinner(boolean winner) {
+        this.winner = winner;
     }
 
     private Map<Integer, InningsScoreCard> inningsScores = new HashMap<>();

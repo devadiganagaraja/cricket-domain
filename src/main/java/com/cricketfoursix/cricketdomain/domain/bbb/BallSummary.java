@@ -4,7 +4,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 
 public class BallSummary {
     @Indexed
-    private String eventId;
+    private Long eventId;
     private int inningsNo;
     private double overUnique;
     private double overActual;
@@ -17,11 +17,11 @@ public class BallSummary {
     private int batsmanRuns;
     private String text;
 
-    public String getEventId() {
+    public Long getEventId() {
         return eventId;
     }
 
-    public void setEventId(String eventId) {
+    public void setEventId(Long eventId) {
         this.eventId = eventId;
     }
 
