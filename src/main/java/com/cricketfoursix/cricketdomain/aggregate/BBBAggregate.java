@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "bbbs")
-public class BBBAggregate extends BaseAggregate {
+public class BBBAggregate {
     @Id
     private String ballId;
 

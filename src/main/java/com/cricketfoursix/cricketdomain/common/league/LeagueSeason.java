@@ -11,8 +11,6 @@ import java.util.*;
 
 public class LeagueSeason {
     private String leagueYear;
-    private String leagueStartDate;
-    private String leagueEndDate;
     private String name;
     private Date startDate;
     private Date endDate;
@@ -34,21 +32,6 @@ public class LeagueSeason {
         this.leagueYear = leagueYear;
     }
 
-    public String getLeagueStartDate() {
-        return leagueStartDate;
-    }
-
-    public void setLeagueStartDate(String leagueStartDate) {
-        this.leagueStartDate = leagueStartDate;
-    }
-
-    public String getLeagueEndDate() {
-        return leagueEndDate;
-    }
-
-    public void setLeagueEndDate(String leagueEndDate) {
-        this.leagueEndDate = leagueEndDate;
-    }
 
     public String getName() {
         return name;

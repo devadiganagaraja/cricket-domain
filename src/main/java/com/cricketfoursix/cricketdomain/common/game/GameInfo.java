@@ -146,4 +146,25 @@ public class GameInfo {
     public void setNote(String note) {
         this.note = note;
     }
+
+    @Override
+    public String toString() {
+        return "GameInfo{" +
+                "name='" + name + '\'' +
+                ", gameId=" + gameId +
+                ", leagueId=" + leagueId +
+                ", leagueName='" + leagueName + '\'' +
+                ", season=" + season +
+                ", date=" + date +
+                ", endDate=" + endDate +
+                ", gameStatus=" + gameStatus +
+                ", venue='" + venue + '\'' +
+                ", competitor1=" + competitor1 +
+                ", competitor2=" + competitor2 +
+                ", gameClass=" + gameClass +
+                ", gameSummary=" + gameSummary +
+                ", note='" + note + '\'' +
+                ", toss='" + toss + '\'' +
+                '}';
+    }
 }
