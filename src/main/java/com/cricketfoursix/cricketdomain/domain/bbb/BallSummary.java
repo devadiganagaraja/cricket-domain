@@ -15,7 +15,17 @@ public class BallSummary {
     private boolean noBall;
     private int runs;
     private int batsmanRuns;
+
+    public String getShortText() {
+        return shortText;
+    }
+
+    public void setShortText(String shortText) {
+        this.shortText = shortText;
+    }
+
     private String text;
+    private String shortText;
 
     public Long getEventId() {
         return eventId;
