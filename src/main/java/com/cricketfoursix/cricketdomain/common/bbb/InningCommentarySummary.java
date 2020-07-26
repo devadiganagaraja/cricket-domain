@@ -4,11 +4,21 @@ public class InningCommentarySummary {
     private int inningsNo;
     private int totalRuns;
     private int wickets;
+
+    private double runRate;
     private double oversUnique;
     private String battingTeamName;
 
     public int getInningsNo() {
         return inningsNo;
+    }
+
+    public double getRunRate() {
+        return runRate;
+    }
+
+    public void setRunRate(double runRate) {
+        this.runRate = runRate;
     }
 
     public void setInningsNo(int inningsNo) {
