@@ -1,6 +1,7 @@
 package com.cricketfoursix.cricketdomain.common.game;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class GameInfo {
     private String name;
@@ -166,5 +167,22 @@ public class GameInfo {
                 ", note='" + note + '\'' +
                 ", toss='" + toss + '\'' +
                 '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GameInfo gameInfo = (GameInfo) o;
+        return gameId == gameInfo.gameId &&
+                Objects.equals(gameSummary, gameInfo.gameSummary) &&
+                Objects.equals(note, gameInfo.note) &&
+                Objects.equals(toss, gameInfo.toss);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gameId, gameSummary, note, toss);
     }
 }
