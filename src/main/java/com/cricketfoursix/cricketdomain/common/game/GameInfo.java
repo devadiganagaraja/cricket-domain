@@ -175,14 +175,11 @@ public class GameInfo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GameInfo gameInfo = (GameInfo) o;
-        return gameId == gameInfo.gameId &&
-                Objects.equals(gameSummary, gameInfo.gameSummary) &&
-                Objects.equals(note, gameInfo.note) &&
-                Objects.equals(toss, gameInfo.toss);
+        return gameId == gameInfo.gameId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(gameId, gameSummary, note, toss);
+        return Objects.hash(gameId);
     }
 }
