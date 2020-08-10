@@ -5,6 +5,7 @@ import java.util.Objects;
 public class BattingLeader implements Comparable<BattingLeader>{
     private long playerId;
     private String playerName;
+    private String teamName;
     private int matches;
     private int runs;
     private int balls;
@@ -15,6 +16,14 @@ public class BattingLeader implements Comparable<BattingLeader>{
 
     public int getBalls() {
         return balls;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
     }
 
     public void setBalls(int balls) {

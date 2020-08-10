@@ -26,5 +26,13 @@ public class LeagueAggregate {
     public void setLeagueInfo(LeagueInfo leagueInfo) {
         this.leagueInfo = leagueInfo;
     }
+
+    @Override
+    public String toString() {
+        return "LeagueAggregate{" +
+                "id=" + id +
+                ", leagueInfo=" + leagueInfo +
+                '}';
+    }
 }
 

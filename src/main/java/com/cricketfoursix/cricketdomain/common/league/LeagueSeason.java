@@ -5,7 +5,7 @@ package com.cricketfoursix.cricketdomain.common.league;
 import com.cricketfoursix.cricketdomain.common.game.GameInfo;
 import com.cricketfoursix.cricketdomain.common.stats.BattingLeader;
 import com.cricketfoursix.cricketdomain.common.stats.BowlingLeader;
-import com.cricketfoursix.cricketdomain.common.stats.TeamStat;
+import com.cricketfoursix.cricketdomain.common.stats.TeamStandingGroup;
 
 import java.util.*;
 
@@ -19,10 +19,17 @@ public class LeagueSeason {
     private Set<GameInfo> postGames = new HashSet<>();
     private Set<GameInfo> nextGames = new HashSet<>();
     private Set<GameInfo> liveGames = new HashSet<>();
-    private List<TeamStat> TeamStats;
-    private Set<BattingLeader> BattingLeaders;
-    private Set<BowlingLeader> BowlingLeaders;
+    private List<TeamStandingGroup> teamGroups =  new ArrayList<>();
+    private List<BattingLeader> battingLeaders;
+    private List<BowlingLeader> bowlingLeaders;
 
+    public List<TeamStandingGroup> getTeamGroups() {
+        return teamGroups;
+    }
+
+    public void setTeamGroups(List<TeamStandingGroup> teamGroups) {
+        this.teamGroups = teamGroups;
+    }
 
     public String getLeagueYear() {
         return leagueYear;
@@ -97,28 +104,38 @@ public class LeagueSeason {
         this.liveGames = liveGames;
     }
 
-    public List<TeamStat> getTeamStats() {
-        return TeamStats;
+    public List<BattingLeader> getBattingLeaders() {
+        return battingLeaders;
     }
 
-    public void setTeamStats(List<TeamStat> teamStats) {
-        TeamStats = teamStats;
+    public void setBattingLeaders(List<BattingLeader> battingLeaders) {
+        this.battingLeaders = battingLeaders;
     }
 
-    public Set<BattingLeader> getBattingLeaders() {
-        return BattingLeaders;
+    public List<BowlingLeader> getBowlingLeaders() {
+        return bowlingLeaders;
     }
 
-    public void setBattingLeaders(Set<BattingLeader> battingLeaders) {
-        BattingLeaders = battingLeaders;
+    public void setBowlingLeaders(List<BowlingLeader> bowlingLeaders) {
+        this.bowlingLeaders = bowlingLeaders;
     }
 
-    public Set<BowlingLeader> getBowlingLeaders() {
-        return BowlingLeaders;
-    }
-
-    public void setBowlingLeaders(Set<BowlingLeader> bowlingLeaders) {
-        BowlingLeaders = bowlingLeaders;
+    @Override
+    public String toString() {
+        return "LeagueSeason{" +
+                "leagueYear='" + leagueYear + '\'' +
+                ", name='" + name + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", eventSet=" + eventSet +
+                ", teams=" + teams +
+                ", postGames=" + postGames +
+                ", nextGames=" + nextGames +
+                ", liveGames=" + liveGames +
+                ", teamGroups=" + teamGroups +
+                ", battingLeaders=" + battingLeaders +
+                ", bowlingLeaders=" + bowlingLeaders +
+                '}';
     }
 }
 

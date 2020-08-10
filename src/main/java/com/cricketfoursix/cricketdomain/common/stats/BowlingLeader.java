@@ -5,10 +5,20 @@ import java.util.Objects;
 public class BowlingLeader implements Comparable<BowlingLeader> {
     private long playerId;
     private String playerName;
+    private String teamName;
     private int matches;
     private int runsConceded;
     private float overs;
     private int wickets;
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
     private int extras;
     private String strikeRate;
     private String average;
