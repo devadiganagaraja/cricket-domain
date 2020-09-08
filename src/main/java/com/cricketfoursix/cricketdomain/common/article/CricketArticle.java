@@ -1,15 +1,52 @@
 package com.cricketfoursix.cricketdomain.common.article;
 
 
+import java.util.Date;
+
 public class CricketArticle {
     private long id;
     private String title;
     private String prePara;
     private String image;
     private String postPara;
+
+    @Override
+    public String toString() {
+        return "CricketArticle{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", prePara='" + prePara + '\'' +
+                ", image='" + image + '\'' +
+                ", postPara='" + postPara + '\'' +
+                ", authorInfo=" + authorInfo +
+                ", author='" + author + '\'' +
+                ", articleStatus=" + articleStatus +
+                ", lastModified=" + lastModified +
+                ", publishDate=" + publishDate +
+                '}';
+    }
+
     private ArticleAuthor authorInfo;
     private String author;
+    private ArticleStatus articleStatus;
+    private Date lastModified;
+    private Date publishDate;
 
+    public ArticleStatus getArticleStatus() {
+        return articleStatus;
+    }
+
+    public void setArticleStatus(ArticleStatus articleStatus) {
+        this.articleStatus = articleStatus;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
 
     public long getId() {
         return id;
@@ -66,4 +103,14 @@ public class CricketArticle {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+
+    public Date getLastModified() {
+        return lastModified;
+    }
+
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
+    }
+
 }

@@ -1,7 +1,10 @@
 package com.cricketfoursix.cricketdomain.aggregate;
 
+import com.cricketfoursix.cricketdomain.common.article.ArticleStatus;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 @Document(collection = "articles")
 public class ArticleAggregate {
@@ -12,6 +15,9 @@ public class ArticleAggregate {
     private String image;
     private String postPara;
     private String  author;
+    private ArticleStatus articleStatus;
+    private Date lastModified;
+    private Date publishDate;
 
     public long getId() {
         return id;
@@ -57,7 +63,48 @@ public class ArticleAggregate {
         return author;
     }
 
+    @Override
+    public String toString() {
+        return "ArticleAggregate{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", prePara='" + prePara + '\'' +
+                ", image='" + image + '\'' +
+                ", postPara='" + postPara + '\'' +
+                ", author='" + author + '\'' +
+                ", articleStatus=" + articleStatus +
+                ", lastModified=" + lastModified +
+                ", publishDate=" + publishDate +
+                '}';
+    }
+
     public void setAuthor(String author) {
         this.author = author;
     }
+
+
+    public ArticleStatus getArticleStatus() {
+        return articleStatus;
+    }
+
+    public void setArticleStatus(ArticleStatus articleStatus) {
+        this.articleStatus = articleStatus;
+    }
+
+    public Date getLastModified() {
+        return lastModified;
+    }
+
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
+    }
+
 }
