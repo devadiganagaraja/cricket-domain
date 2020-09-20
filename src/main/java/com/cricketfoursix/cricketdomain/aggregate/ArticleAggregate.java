@@ -1,10 +1,11 @@
 package com.cricketfoursix.cricketdomain.aggregate;
 
+import com.cricketfoursix.cricketdomain.common.article.ArticleResponse;
 import com.cricketfoursix.cricketdomain.common.article.ArticleStatus;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.util.*;
 
 @Document(collection = "articles")
 public class ArticleAggregate {
@@ -18,6 +19,19 @@ public class ArticleAggregate {
     private ArticleStatus articleStatus;
     private Date lastModified;
     private Date publishDate;
+    private Set<String> claps = new HashSet<>();
+    private Set<String> tags = new HashSet<>();
+
+    public Set<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<String> tags) {
+        this.tags = tags;
+    }
+
+    private List<ArticleResponse> articleResponses= new ArrayList<>();
+
 
     public long getId() {
         return id;
@@ -25,6 +39,22 @@ public class ArticleAggregate {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Set<String> getClaps() {
+        return claps;
+    }
+
+    public void setClaps(Set<String> claps) {
+        this.claps = claps;
+    }
+
+    public List<ArticleResponse> getArticleResponses() {
+        return articleResponses;
+    }
+
+    public void setArticleResponses(List<ArticleResponse> articleResponses) {
+        this.articleResponses = articleResponses;
     }
 
     public String getTitle() {
@@ -75,6 +105,8 @@ public class ArticleAggregate {
                 ", articleStatus=" + articleStatus +
                 ", lastModified=" + lastModified +
                 ", publishDate=" + publishDate +
+                ", claps=" + claps +
+                ", articleResponses=" + articleResponses +
                 '}';
     }
 

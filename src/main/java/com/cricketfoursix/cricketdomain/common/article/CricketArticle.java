@@ -1,51 +1,87 @@
 package com.cricketfoursix.cricketdomain.common.article;
 
 
-import java.util.Date;
+import java.util.*;
 
 public class CricketArticle {
     private long id;
     private String title;
     private String prePara;
-    private String image;
     private String postPara;
+    private CricketEnthusiast authorInfo;
 
-    @Override
-    public String toString() {
-        return "CricketArticle{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", prePara='" + prePara + '\'' +
-                ", image='" + image + '\'' +
-                ", postPara='" + postPara + '\'' +
-                ", authorInfo=" + authorInfo +
-                ", author='" + author + '\'' +
-                ", articleStatus=" + articleStatus +
-                ", lastModified=" + lastModified +
-                ", publishDate=" + publishDate +
-                '}';
+    public Set<String> getTags() {
+        return tags;
     }
 
-    private ArticleAuthor authorInfo;
+    public void setTags(Set<String> tags) {
+        this.tags = tags;
+    }
+
     private String author;
-    private ArticleStatus articleStatus;
     private Date lastModified;
-    private Date publishDate;
+    private Date published;
+    private Set<String> claps;
+    private Set<String> tags = new HashSet<>();
+    private List<ArticleResponse> articleResponses= new ArrayList<>();
+    private String leagueTag;
+    private String teamTag;
+    private String playerTag;
 
-    public ArticleStatus getArticleStatus() {
-        return articleStatus;
+    public String getLeagueTag() {
+        return leagueTag;
     }
 
-    public void setArticleStatus(ArticleStatus articleStatus) {
-        this.articleStatus = articleStatus;
+    public void setLeagueTag(String leagueTag) {
+        this.leagueTag = leagueTag;
     }
 
-    public Date getPublishDate() {
-        return publishDate;
+    public String getTeamTag() {
+        return teamTag;
     }
 
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
+    public void setTeamTag(String teamTag) {
+        this.teamTag = teamTag;
+    }
+
+    public String getPlayerTag() {
+        return playerTag;
+    }
+
+    public void setPlayerTag(String playerTag) {
+        this.playerTag = playerTag;
+    }
+
+    public Set<String> getClaps() {
+        return claps;
+    }
+
+    public void setClaps(Set<String> claps) {
+        this.claps = claps;
+    }
+
+    public List<ArticleResponse> getArticleResponses() {
+        return articleResponses;
+    }
+
+    public void setArticleResponses(List<ArticleResponse> articleResponses) {
+        this.articleResponses = articleResponses;
+    }
+
+    public Date getLastModified() {
+        return lastModified;
+    }
+
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
+    }
+
+    public Date getPublished() {
+        return published;
+    }
+
+    public void setPublished(Date published) {
+        this.published = published;
     }
 
     public long getId() {
@@ -72,14 +108,6 @@ public class CricketArticle {
         this.prePara = prePara;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public String getPostPara() {
         return postPara;
     }
@@ -88,11 +116,11 @@ public class CricketArticle {
         this.postPara = postPara;
     }
 
-    public ArticleAuthor getAuthorInfo() {
+    public CricketEnthusiast getAuthorInfo() {
         return authorInfo;
     }
 
-    public void setAuthorInfo(ArticleAuthor authorInfo) {
+    public void setAuthorInfo(CricketEnthusiast authorInfo) {
         this.authorInfo = authorInfo;
     }
 
@@ -103,14 +131,4 @@ public class CricketArticle {
     public void setAuthor(String author) {
         this.author = author;
     }
-
-
-    public Date getLastModified() {
-        return lastModified;
-    }
-
-    public void setLastModified(Date lastModified) {
-        this.lastModified = lastModified;
-    }
-
 }

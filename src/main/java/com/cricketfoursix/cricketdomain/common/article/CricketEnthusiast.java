@@ -1,6 +1,6 @@
 package com.cricketfoursix.cricketdomain.common.article;
 
-public class ArticleAuthor {
+public class CricketEnthusiast {
     private String userName;
     private String firstName;
     private String lastName;
